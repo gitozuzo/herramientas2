@@ -1,0 +1,67 @@
+#galeria {
+  background-color: $color-tarjeta-fondo;
+  padding: $espaciado-seccion;
+
+  .container {
+    @extend %container;
+    text-align: center;
+  }
+
+  .section__title {
+    font-family: $font-decorativa;
+    font-size: $font-titulo;
+    font-weight: bold;
+    margin-bottom: $espaciado-m;
+    color: $color-negro;
+  }
+
+  .galeria {
+    @include centrar-flex(row, center, center);
+    flex-wrap: wrap;
+    gap: $espaciado-m;
+    width: 100%;
+
+    .galeria__item {
+      flex: 1 1 calc(33.33% - $espaciado-m); // 3 imágenes por fila con espaciado
+      max-width: 30%;
+      border-radius: $radio-borde;
+      overflow: hidden; // Para bordes redondeados correctos
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: $radio-borde;
+        transition: $transicion;
+
+        &:hover {
+          transform: scale(1.05); // Efecto de zoom al pasar el mouse
+        }
+      }
+    }
+  }
+
+  // RESPONSIVE: Ajustes para tablets y móviles
+  @media (max-width: $breakpoint-tablet) {
+    .galeria {
+      gap: $espaciado-m;
+
+      .galeria__item {
+        flex: 1 1 calc(50% - $espaciado-m); // 2 imágenes por fila en tabletas
+        max-width: 45%;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-movil) {
+    .galeria {
+      @include centrar-flex(column, center, center);
+      gap: $espaciado-m;
+
+      .galeria__item {
+        flex: 1 1 100%; // 1 imagen por fila en móviles
+        max-width: 100%;
+      }
+    }
+  }
+}

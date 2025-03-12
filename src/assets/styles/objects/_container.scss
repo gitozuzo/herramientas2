@@ -1,0 +1,15 @@
+%container {
+  width: 90%;
+  max-width: $ancho-maximo;
+  margin: 0 auto;
+  padding: $espaciado-m;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 95%;
+  }
+
+  @media (max-width: $breakpoint-movil) {
+    width: 100%;
+    padding: $espaciado-s;
+  }
+}

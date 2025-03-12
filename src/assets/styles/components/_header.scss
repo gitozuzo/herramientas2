@@ -1,0 +1,69 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $color-texto-claro;
+  box-shadow: $sombra-box;
+  z-index: 1000;
+  padding: $espaciado-s 0;
+
+  .nav {
+    @extend %container;
+    @include centrar-flex(row, space-between, center);
+
+    &__logo {
+      font-family: $font-decorativa;
+      font-size: $font-titulo;
+      color: $color-primario;
+      font-weight: normal;
+      white-space: nowrap; // Evita que el logo se divida en 2 líneas
+    }
+
+    &__menu {
+      @include centrar-flex(row, center, center);
+      gap: $espaciado-m;
+      font-size: $font-texto;
+      font-weight: normal;
+
+      a {
+        color: $color-texto;
+        transition: color $transicion;
+
+        &:hover {
+          color: $color-primario;
+        }
+      }
+
+      @media (max-width: $breakpoint-movil) {
+        display: none; // Oculta el menú en móviles
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: $color-texto-claro;
+        box-shadow: $sombra-box;
+        padding: $espaciado-m;
+        gap: $espaciado-s;
+      }
+    }
+
+    &__menu--active {
+      display: flex !important; // Muestra el menú cuando está activo
+    }
+
+    &__toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: $font-titulo-movil;
+      cursor: pointer;
+      color: $color-texto;
+
+      @media (max-width: $breakpoint-movil) {
+        display: block;
+      }
+    }
+  }
+}

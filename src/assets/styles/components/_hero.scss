@@ -1,0 +1,48 @@
+.hero {
+  width: 100%;
+  height: 100vh; // Se ajusta a la altura total de la pantalla
+  background: url($hero-imagen) no-repeat center center/cover;
+  position: relative;
+  @include centrar-flex(column, center, center);
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-negro, 0.5); // Oscurece la imagen de fondo
+    @include centrar-flex(column, center, center);
+    text-align: center;
+  }
+
+  &__content {
+    @extend %container;
+    @include centrar-flex(column, center, center);
+  }
+
+  &__title {
+    font-family: $font-decorativa;
+    font-size: $font-titulo-hero;
+    font-weight: bold;
+    color: $color-texto-claro;
+    margin-bottom: $espaciado-m;
+
+    @media (max-width: $breakpoint-movil) {
+      font-size: $font-titulo-hero-movil;
+    }
+  }
+
+  &__description {
+    font-size: $font-descripcion;
+    max-width: $ancho-maximo-texto;
+    margin: 0 auto;
+    color: $color-texto-claro;
+    font-weight: normal;
+
+    @media (max-width: $breakpoint-movil) {
+      font-size: $font-descripcion-movil;
+      max-width: 90%;
+    }
+  }
+}

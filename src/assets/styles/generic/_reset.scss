@@ -1,0 +1,39 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; // Desplazamiento suave en anclajes
+  scroll-padding-top: 80px; // Ajusta según la altura del header
+}
+
+body {
+  font-size: 100%;
+  line-height: $line-height; // Mejora la legibilidad
+  -webkit-font-smoothing: antialiased; // Suaviza la fuente en navegadores WebKit
+}
+
+img {
+  max-width: 100%; //  Hace que las imágenes sean responsivas
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit; // Asegura que usen la misma tipografía que el body
+}
+
+a {
+  text-decoration: none; // Elimina el subrayado predeterminado en enlaces
+  color: inherit; // Usa el color del texto padre
+}
+
+ul,
+ol {
+  list-style: none; // Elimina los estilos predeterminados en listas
+}

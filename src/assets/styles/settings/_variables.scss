@@ -1,0 +1,79 @@
+// COLORES
+$color-primario: #8b4513; // Marrón principal
+$color-secundario: #d97706; // Marrón dorado
+$color-fondo: #f8f9fa; // Fondo claro
+$color-fondo-oscuro: #111827; // Fondo oscuro (footer)
+$color-texto: #333; // Texto principal
+$color-texto-secundario: #555; // Texto más claro para descripciones
+$color-texto-claro: white; // Texto en fondos oscuros
+$color-hover: #a0522d; // Marrón más claro (hover)
+$color-negro: #000; // Negro para overlays
+$color-tarjeta-fondo: white; // Fondo de tarjetas
+$color-tarjeta-sombra: rgba(0, 0, 0, 0.1); // Sombra en tarjetas
+$color-borde-input: #ccc; // Color del borde de inputs
+$color-borde-separador: rgba(255, 255, 255, 0.2); // Separador en footer
+$color-enlace: #0056b3;
+
+// TIPOGRAFÍA
+$font-primaria: "Arial", sans-serif;
+$font-decorativa: "Pacifico", cursive;
+$font-titulo: 2rem; // Tamaño base de títulos
+$font-subtitulo: 1.4rem; // Tamaño de subtítulos
+$font-subtitulo-s: 1.2rem; // Tamaño de subtítulos pequeños
+$font-titulo-movil: 1.5rem; // Tamaño en móviles
+$font-texto: 1rem; // Tamaño de texto normal
+$font-icono: 1.5rem; // Tamaño de iconos en secciones
+$font-copyright: 0.9rem; // Tamaño de fuente en copyright
+$line-height: 1.5; // Altura de línea para mejorar legibilidad
+$ancho-maximo-texto: 600px; // Ancho máximo de texto en Hero
+
+// HERO (Tamaños específicos)
+$font-titulo-hero: 3.5rem; // Tamaño del título en Hero
+$font-titulo-hero-movil: 2.5rem; // Tamaño del título en móviles
+$font-descripcion: 1.4rem; // Tamaño de la descripción en Hero
+$font-descripcion-movil: 1.1rem; // Tamaño de la descripción en móviles
+
+// DIMENSIONES Y ESPACIADOS
+$espaciado-seccion: 4rem 0; // Padding general de secciones
+$espaciado-movil: 2rem 0; // Padding en móviles
+$espaciado-l: 2rem; // Espaciado grande (tarjetas)
+$espaciado-m: 1rem; // Espaciado medio (Hero, títulos)
+$espaciado-s: 0.5rem; // Espaciado pequeño (márgenes)
+$ancho-maximo: 1400px; // Contenedor máximo
+
+// HERO (Imagen y overlay)
+$hero-imagen: "../images/cordero-hero.jpg"; // Imagen de fondo en Hero
+$hero-overlay: rgba(
+  0,
+  0,
+  0,
+  0.5
+); // Oscurecimiento de la imagen de fondo en Hero
+
+// SOMBRAS Y BORDES
+$sombra-box: 0 4px 10px $color-tarjeta-sombra; // Sombra estándar
+$radio-borde: 12px; // Bordes redondeados
+$tamano-icono: 50px; // Tamaño estándar de los iconos en tarjetas
+$alto-imagen-tarjeta: 220px; // Alto de imágenes en tarjetas
+
+//IMÁGENES Y TARJETAS
+$ancho-tarjeta: 48%; // Ancho de tarjetas en vista de escritorio
+$ancho-tarjeta-movil: 90%; // Ancho de tarjetas en móviles
+$galeria-gap: 1rem; // Espaciado entre imágenes en galería
+
+//RESPONSIVE BREAKPOINTS
+$breakpoint-tablet: 1024px;
+$breakpoint-movil: 768px;
+
+//BOTONES Y FORMULARIOS
+$btn-bg: $color-primario;
+$btn-bg-hover: $color-hover;
+$btn-text: $color-texto-claro;
+$input-bg: white;
+$input-border: $color-borde-input;
+$input-text: $color-texto;
+$input-padding: 0.75rem;
+$input-radio: 6px;
+
+//ANIMACIONES
+$transicion: all 0.3s ease-in-out;

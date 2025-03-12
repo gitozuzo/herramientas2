@@ -1,0 +1,84 @@
+#consejos {
+  background-color: $color-fondo;
+  padding: $espaciado-seccion;
+
+  .container {
+    @extend %container;
+    text-align: center;
+  }
+
+  .consejos {
+    @include centrar-flex(row, space-between, stretch);
+    flex-wrap: wrap;
+    gap: $espaciado-m;
+    width: 100%;
+
+    &__card {
+      background: $color-tarjeta-fondo;
+      padding: $espaciado-l;
+      border-radius: $radio-borde;
+      box-shadow: $sombra-box;
+      text-align: left;
+      flex: 1;
+      min-width: 45%;
+      max-width: 48%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: $transicion;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    &__icon {
+      width: $tamano-icono;
+      height: $tamano-icono;
+      background: $color-primario;
+      color: $color-texto-claro;
+      font-size: $font-icono;
+      @include centrar-flex;
+      border-radius: 50%;
+      margin-bottom: $espaciado-s;
+    }
+
+    &__title {
+      font-size: $font-subtitulo;
+      font-weight: bold;
+      margin-bottom: $espaciado-s;
+      font-family: $font-decorativa;
+      color: $color-primario;
+    }
+
+    &__description {
+      font-size: $font-texto;
+      color: $color-texto-secundario;
+      font-family: $font-primaria;
+    }
+  }
+
+  // RESPONSIVE: Ajustes para tablets y móviles
+  @media (max-width: $breakpoint-tablet) {
+    .consejos {
+      @include centrar-flex(column, center, center);
+
+      &__card {
+        min-width: 80%;
+        max-width: 90%;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-movil) {
+    .consejos {
+      @include centrar-flex(column, center, center);
+
+      &__card {
+        width: 90%;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}

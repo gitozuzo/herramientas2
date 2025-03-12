@@ -1,0 +1,104 @@
+// 📌 Helpers de Espaciado (Margen y Padding)
+/*.u-mt-s {
+  margin-top: $espaciado-s;
+}
+.u-mt-m {
+  margin-top: $espaciado-m;
+}
+.u-mt-l {
+  margin-top: $espaciado-l;
+}
+
+.u-mb-s {
+  margin-bottom: $espaciado-s;
+}
+.u-mb-m {
+  margin-bottom: $espaciado-m;
+}
+.u-mb-l {
+  margin-bottom: $espaciado-l;
+}
+
+.u-pt-s {
+  padding-top: $espaciado-s;
+}
+.u-pt-m {
+  padding-top: $espaciado-m;
+}
+.u-pt-l {
+  padding-top: $espaciado-l;
+}
+
+.u-pb-s {
+  padding-bottom: $espaciado-s;
+}
+.u-pb-m {
+  padding-bottom: $espaciado-m;
+}
+.u-pb-l {
+  padding-bottom: $espaciado-l;
+}
+
+// 📌 Helpers de Texto (Alineación y Estilos)
+.u-text-center {
+  text-align: center;
+}
+.u-text-left {
+  text-align: left;
+}
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-bold {
+  font-weight: bold;
+}
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+
+// 📌 Helpers de Visibilidad (Mostrar/Ocultar Elementos)
+.u-hidden {
+  display: none !important;
+}
+
+@media (max-width: $breakpoint-movil) {
+  .u-hidden-movil {
+    display: none !important;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .u-hidden-tablet {
+    display: none !important;
+  }
+}
+
+// 📌 Helpers de Botones (Tamaño y Color)
+.u-btn-small {
+  padding: calc($input-padding / 2);
+  font-size: $font-texto * 0.9;
+}
+
+.u-btn-large {
+  padding: calc($input-padding * 1.5);
+  font-size: $font-texto * 1.2;
+}
+
+// 📌 Helpers de Color (Fondo y Texto)
+.u-bg-primary {
+  background-color: $color-primario;
+}
+.u-bg-secondary {
+  background-color: $color-secundario;
+}
+.u-bg-light {
+  background-color: $color-fondo;
+}
+
+.u-text-primary {
+  color: $color-primario;
+}
+.u-text-secondary {
+  color: $color-secundario;
+}*/

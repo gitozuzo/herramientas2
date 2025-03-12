@@ -1,0 +1,85 @@
+#preparacion {
+  background-color: $color-texto-claro;
+  padding: $espaciado-seccion;
+  width: 100%;
+
+  @extend %container;
+
+  .section__title {
+    font-family: $font-decorativa;
+    font-size: $font-titulo;
+    font-weight: bold;
+    margin-bottom: $espaciado-m;
+    color: $color-texto;
+  }
+
+  .preparacion {
+    @include centrar-flex(row, center, flex-start);
+    flex-wrap: wrap;
+    gap: $espaciado-m;
+    width: 100%;
+
+    .preparacion__card {
+      background: $color-tarjeta-fondo;
+      padding: $espaciado-l;
+      border-radius: $radio-borde;
+      box-shadow: $sombra-box;
+      flex: 1 1 380px;
+      max-width: 420px;
+      @include centrar-flex(column, flex-start, flex-start);
+      transition: $transicion;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    .preparacion__image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: $radio-borde;
+      margin-bottom: $espaciado-s;
+    }
+
+    .preparacion__title {
+      font-size: $font-subtitulo;
+      font-weight: bold;
+      margin-bottom: $espaciado-s;
+      font-family: $font-decorativa;
+      color: $color-primario;
+    }
+
+    .preparacion__description {
+      font-size: $font-texto;
+      color: $color-texto-secundario;
+      font-family: $font-primaria;
+    }
+  }
+
+  // RESPONSIVE: Ajustes para tablets y móviles
+  @media (max-width: $breakpoint-tablet) {
+    .preparacion {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .preparacion__card {
+      min-width: 350px;
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: $breakpoint-movil) {
+    .preparacion {
+      @include centrar-flex(column, center, center);
+      text-align: center;
+    }
+
+    .preparacion__card {
+      width: 95%;
+      max-width: 420px;
+      @include centrar-flex(column, center, center);
+    }
+  }
+}

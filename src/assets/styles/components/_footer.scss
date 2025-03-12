@@ -1,0 +1,123 @@
+.footer {
+  background-color: $color-fondo-oscuro;
+  color: $color-texto-claro;
+  width: 100%;
+  padding: $espaciado-l 0;
+
+  .container {
+    @extend %container;
+  }
+
+  .footer__content {
+    @include centrar-flex(row, space-between, flex-start);
+    flex-wrap: wrap;
+    gap: $espaciado-m;
+  }
+
+  .footer__section {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .footer__title {
+    font-family: $font-primaria;
+    font-size: $font-subtitulo-s;
+    margin-bottom: $espaciado-s;
+    color: $color-texto-claro;
+  }
+
+  .footer__paragraph {
+    font-family: $font-primaria;
+    font-size: $font-texto;
+    color: $color-texto-claro;
+
+    a {
+      color: $color-enlace;
+
+      /*&:hover {
+        color: $color-secundario;
+      }*/
+    }
+
+    /*a:hover {
+      color: $color-secundario;
+    }*/
+  }
+
+  .footer__social {
+    @include centrar-flex(row, flex-start, center);
+    gap: $espaciado-s;
+
+    a {
+      color: $color-texto-claro;
+      font-size: $font-icono;
+      transition: $transicion;
+    }
+
+    a:hover {
+      color: $color-secundario;
+    }
+  }
+
+  .footer__form {
+    @include centrar-flex(row, flex-start, center);
+    gap: $espaciado-s;
+
+    .footer__input {
+      flex: 1;
+      padding: $input-padding;
+      border-radius: $input-radio;
+      border: 1px solid $color-borde-input;
+      outline: none;
+      font-size: $font-texto;
+    }
+
+    .footer__button {
+      background-color: $btn-bg;
+      color: $btn-text;
+      border: none;
+      padding: $input-padding $espaciado-m;
+      border-radius: $input-radio;
+      cursor: pointer;
+      transition: $transicion;
+
+      &:hover {
+        background-color: $btn-bg-hover;
+      }
+    }
+  }
+
+  .footer__copyright {
+    text-align: center;
+    margin-top: $espaciado-m;
+    font-size: $font-texto * 0.9;
+    opacity: 0.8;
+    padding-top: $espaciado-s;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  // RESPONSIVE: Ajustes para móviles
+  @media (max-width: $breakpoint-movil) {
+    .footer__content {
+      @include centrar-flex(column, center, center);
+      text-align: center;
+    }
+
+    .footer__social {
+      @include centrar-flex(row, center, center);
+    }
+
+    .footer__form {
+      @include centrar-flex(column, center, center);
+      width: 100%;
+
+      .footer__input {
+        width: 100%;
+      }
+
+      .footer__button {
+        width: 100%;
+      }
+    }
+  }
+}

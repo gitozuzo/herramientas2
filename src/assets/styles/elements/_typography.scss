@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+// TIPOGRAFÍA GLOBAL
+body {
+  font-family: $font-primaria;
+  color: $color-texto;
+  background-color: $color-tarjeta-fondo;
+  line-height: $line-height;
+}
+
+// TITULOS Y ENCABEZADOS
+h1,
+h2,
+h3 {
+  font-family: $font-decorativa;
+}
+
+// SUBTÍTULOS Y TEXTOS GENERALES
+h2 {
+  font-size: $font-titulo;
+  font-weight: bold;
+  margin-bottom: $espaciado-s;
+  color: $color-negro;
+}
+
+h3 {
+  font-size: $font-subtitulo;
+  font-weight: bold;
+  margin-bottom: $espaciado-s;
+  color: $color-primario;
+}
+
+p {
+  font-size: $font-texto;
+  color: $color-texto-secundario;
+}

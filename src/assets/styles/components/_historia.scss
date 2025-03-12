@@ -1,0 +1,85 @@
+.section {
+  padding: $espaciado-seccion;
+  background-color: $color-fondo;
+
+  &__title {
+    font-size: $font-titulo;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: $espaciado-m;
+    font-family: $font-decorativa;
+    color: $color-negro;
+  }
+}
+
+.historia {
+  @extend %container;
+  @include centrar-flex(row, space-between, flex-start);
+  flex-wrap: wrap;
+  gap: $espaciado-m;
+  width: 100%;
+
+  &__card {
+    background: $color-tarjeta-fondo;
+    padding: $espaciado-l;
+    border-radius: $radio-borde;
+    box-shadow: $sombra-box;
+    text-align: left;
+    flex: 1;
+    min-width: 45%;
+    max-width: 48%;
+    @include centrar-flex(column, flex-start, flex-start);
+    transition: $transicion;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__icon {
+    width: $tamano-icono;
+    height: $tamano-icono;
+    background: $color-primario;
+    color: $color-texto-claro;
+    font-size: $font-icono;
+    @include centrar-flex(row, center, center);
+    border-radius: 50%;
+    margin-bottom: $espaciado-s;
+  }
+
+  &__title {
+    font-size: $font-subtitulo;
+    font-weight: bold;
+    margin-bottom: $espaciado-s;
+    font-family: $font-decorativa;
+    color: $color-primario;
+  }
+
+  &__description {
+    font-size: $font-texto;
+    color: $color-texto-secundario;
+    font-family: $font-primaria;
+  }
+
+  // RESPONSIVE: Ajustes para tablets y móviles
+  @media (max-width: $breakpoint-tablet) {
+    @include centrar-flex(column, center, center);
+    text-align: center;
+
+    &__card {
+      min-width: 80%;
+      max-width: 90%;
+      @include centrar-flex(column, center, center);
+    }
+  }
+
+  @media (max-width: $breakpoint-movil) {
+    @include centrar-flex(column, center, center);
+    text-align: center;
+
+    &__card {
+      width: 90%;
+      @include centrar-flex(column, center, center);
+    }
+  }
+}
