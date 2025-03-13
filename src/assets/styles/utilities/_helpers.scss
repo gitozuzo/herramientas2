@@ -1,4 +1,4 @@
-// 📌 Helpers de Espaciado (Margen y Padding)
+// Helpers de Espaciado (Margen y Padding)
 /*.u-mt-s {
   margin-top: $espaciado-s;
 }
@@ -39,42 +39,8 @@
   padding-bottom: $espaciado-l;
 }
 
-// 📌 Helpers de Texto (Alineación y Estilos)
-.u-text-center {
-  text-align: center;
-}
-.u-text-left {
-  text-align: left;
-}
-.u-text-right {
-  text-align: right;
-}
 
-.u-text-bold {
-  font-weight: bold;
-}
-.u-text-uppercase {
-  text-transform: uppercase;
-}
-
-// 📌 Helpers de Visibilidad (Mostrar/Ocultar Elementos)
-.u-hidden {
-  display: none !important;
-}
-
-@media (max-width: $breakpoint-movil) {
-  .u-hidden-movil {
-    display: none !important;
-  }
-}
-
-@media (max-width: $breakpoint-tablet) {
-  .u-hidden-tablet {
-    display: none !important;
-  }
-}
-
-// 📌 Helpers de Botones (Tamaño y Color)
+// Helpers de Botones (Tamaño y Color)
 .u-btn-small {
   padding: calc($input-padding / 2);
   font-size: $font-texto * 0.9;
@@ -85,7 +51,7 @@
   font-size: $font-texto * 1.2;
 }
 
-// 📌 Helpers de Color (Fondo y Texto)
+// Helpers de Color (Fondo y Texto)
 .u-bg-primary {
   background-color: $color-primario;
 }
